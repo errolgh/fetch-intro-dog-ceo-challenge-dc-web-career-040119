@@ -45,5 +45,14 @@ function makeBreedList(key) {
   let bigMoneyMoves = document.getElementById("dog-breeds")
   let li = document.createElement("li")
   li.innerText = key
+  li.addEventListener('click', someOtherFunkyBoi)
   bigMoneyMoves.appendChild(li)
+}
+
+//well, we just told the code to listen for a client's click
+// and addEventListener takes 2 arguments, the second one being the function we want to have something happen when the user clicks
+
+function someOtherFunkyBoi(event){
+  console.log("I got a bad feeling 'bout this, Rick...")
+event.target.style.color = "firebrick"
 }
